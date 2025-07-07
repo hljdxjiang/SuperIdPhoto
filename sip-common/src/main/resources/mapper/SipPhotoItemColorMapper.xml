@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.oldbaby.sip.common.mapper.SipPhotoItemColorMapper">
+
+    <resultMap id="BaseResultMap" type="cn.oldbaby.sip.common.domain.SipPhotoItemColor">
+            <id property="id" column="id" />
+            <result property="colorId" column="color_id" />
+            <result property="itemId" column="item_id" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,color_id,item_id
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sip_photo_item_color
+        where  id = #{id} 
+    </select>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sip_photo_item_color
+        <where>
+        <if test="itemId != null and itemId !=''">
+            item_Id = #{itemId}
+        </if>
+        </where>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from sip_photo_item_color
+        where  id = #{id} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.oldbaby.sip.common.domain.SipPhotoItemColor" useGeneratedKeys="true">
+        insert into sip_photo_item_color
+        ( id,color_id,item_id)
+        values (#{id},#{colorId},#{itemId})
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.oldbaby.sip.common.domain.SipPhotoItemColor" useGeneratedKeys="true">
+        insert into sip_photo_item_color
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="colorId != null">color_id,</if>
+                <if test="itemId != null">item_id,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id},</if>
+                <if test="colorId != null">#{colorId},</if>
+                <if test="itemId != null">#{itemId},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cn.oldbaby.sip.common.domain.SipPhotoItemColor">
+        update sip_photo_item_color
+        <set>
+                <if test="colorId != null">
+                    color_id = #{colorId},
+                </if>
+                <if test="itemId != null">
+                    item_id = #{itemId},
+                </if>
+        </set>
+        where   id = #{id} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cn.oldbaby.sip.common.domain.SipPhotoItemColor">
+        update sip_photo_item_color
+        set 
+            color_id =  #{colorId},
+            item_id =  #{itemId}
+        where   id = #{id} 
+    </update>
+</mapper>

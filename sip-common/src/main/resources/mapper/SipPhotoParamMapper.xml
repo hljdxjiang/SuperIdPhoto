@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.oldbaby.sip.common.mapper.SipPhotoParamMapper">
+
+    <resultMap id="BaseResultMap" type="cn.oldbaby.sip.common.domain.SipPhotoParam">
+            <id property="id" column="id" />
+            <result property="itemId" column="item_id" />
+            <result property="itemName" column="item_name" />
+            <result property="widthPx" column="width_px" />
+            <result property="heightPx" column="height_px" />
+            <result property="dpi" column="dpi" />
+            <result property="fileSizeMsg" column="file_size_msg" />
+            <result property="category" column="category" />
+            <result property="categoryId" column="category_id" />
+            <result property="createTime" column="create_time" />
+            <result property="lastModifiedTime" column="last_modified_time" />
+            <result property="itemStatus" column="item_status" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,item_id,item_name,width_px,height_px,dpi,
+        file_size_msg,category,category_id,create_time,last_modified_time,
+        item_status
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sip_photo_param
+        where  id = #{id} 
+    </select>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sip_photo_param
+        <where>
+            <if test="itemId != null and itemId !=''">
+                item_Id = #{itemId}
+            </if>
+            <if test="itemName != null and itemName != ''">
+                and item_Name = LIKE CONCAT(CONCAT('%', #{itemName}), '%')
+            </if>
+            <if test="categoryId != null and categoryId !=''">
+                category_Id = #{categoryId}
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from sip_photo_param
+        where  id = #{id} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.oldbaby.sip.common.domain.SipPhotoParam" useGeneratedKeys="true">
+        insert into sip_photo_param
+        ( id,item_id,item_name,width_px,height_px,dpi,
+        file_size_msg,category,category_id,create_time,last_modified_time,
+        item_status)
+        values (#{id},#{itemId},#{itemName},#{widthPx},#{heightPx},#{dpi},
+        #{fileSizeMsg},#{category},#{categoryId},#{createTime},#{lastModifiedTime},
+        #{itemStatus})
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.oldbaby.sip.common.domain.SipPhotoParam" useGeneratedKeys="true">
+        insert into sip_photo_param
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="itemId != null">item_id,</if>
+                <if test="itemName != null">item_name,</if>
+                <if test="widthPx != null">width_px,</if>
+                <if test="heightPx != null">height_px,</if>
+                <if test="dpi != null">dpi,</if>
+                <if test="fileSizeMsg != null">file_size_msg,</if>
+                <if test="category != null">category,</if>
+                <if test="categoryId != null">category_id,</if>
+                <if test="createTime != null">create_time,</if>
+                <if test="lastModifiedTime != null">last_modified_time,</if>
+                <if test="itemStatus != null">item_status,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id},</if>
+                <if test="itemId != null">#{itemId},</if>
+                <if test="itemName != null">#{itemName},</if>
+                <if test="widthPx != null">#{widthPx},</if>
+                <if test="heightPx != null">#{heightPx},</if>
+                <if test="dpi != null">#{dpi},</if>
+                <if test="fileSizeMsg != null">#{fileSizeMsg},</if>
+                <if test="category != null">#{category},</if>
+                <if test="categoryId != null">#{categoryId},</if>
+                <if test="createTime != null">#{createTime},</if>
+                <if test="lastModifiedTime != null">#{lastModifiedTime},</if>
+                <if test="itemStatus != null">#{itemStatus},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cn.oldbaby.sip.common.domain.SipPhotoParam">
+        update sip_photo_param
+        <set>
+                <if test="itemId != null">
+                    item_id = #{itemId},
+                </if>
+                <if test="itemName != null">
+                    item_name = #{itemName},
+                </if>
+                <if test="widthPx != null">
+                    width_px = #{widthPx},
+                </if>
+                <if test="heightPx != null">
+                    height_px = #{heightPx},
+                </if>
+                <if test="dpi != null">
+                    dpi = #{dpi},
+                </if>
+                <if test="fileSizeMsg != null">
+                    file_size_msg = #{fileSizeMsg},
+                </if>
+                <if test="category != null">
+                    category = #{category},
+                </if>
+                <if test="categoryId != null">
+                    category_id = #{categoryId},
+                </if>
+                <if test="createTime != null">
+                    create_time = #{createTime},
+                </if>
+                <if test="lastModifiedTime != null">
+                    last_modified_time = #{lastModifiedTime},
+                </if>
+                <if test="itemStatus != null">
+                    item_status = #{itemStatus},
+                </if>
+        </set>
+        where   id = #{id} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cn.oldbaby.sip.common.domain.SipPhotoParam">
+        update sip_photo_param
+        set 
+            item_id =  #{itemId},
+            item_name =  #{itemName},
+            width_px =  #{widthPx},
+            height_px =  #{heightPx},
+            dpi =  #{dpi},
+            file_size_msg =  #{fileSizeMsg},
+            category =  #{category},
+            category_id =  #{categoryId},
+            create_time =  #{createTime},
+            last_modified_time =  #{lastModifiedTime},
+            item_status =  #{itemStatus}
+        where   id = #{id} 
+    </update>
+</mapper>

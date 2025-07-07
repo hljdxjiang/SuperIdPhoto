@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.oldbaby.sip.common.mapper.SipMinipUserMapper">
+
+    <resultMap id="BaseResultMap" type="cn.oldbaby.sip.common.domain.SipMinipUser">
+            <id property="id" column="id" />
+            <result property="mopenid" column="mopenid" />
+            <result property="unionid" column="unionid" />
+            <result property="nickname" column="nickname" />
+            <result property="gender" column="gender" />
+            <result property="mobileNo" column="mobile_no" />
+            <result property="province" column="province" />
+            <result property="city" column="city" />
+            <result property="country" column="country" />
+            <result property="avatarurl" column="avatarurl" />
+            <result property="wartermark" column="wartermark" />
+            <result property="createtime" column="createtime" />
+            <result property="lastmodifiedtime" column="lastmodifiedtime" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,mopenid,unionid,nickname,gender,mobile_no,
+        province,city,country,avatarurl,wartermark,
+        createtime,lastmodifiedtime
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sip_minip_user
+        where  id = #{id} 
+    </select>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sip_minip_user
+        <where>
+        <if test="mopenid != null and mopenid !=''">
+            mopenid = #{mopenid}
+        </if>
+        <if test="unionid != null and unionid != ''">
+            and unionid = #{unionid}
+        </if>
+        <if test="mobileNo != null and mobileNo != ''">
+            and mobile_No = #{mobileNo}
+        </if>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from sip_minip_user
+        where  id = #{id} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.oldbaby.sip.common.SipMinipUser" useGeneratedKeys="true">
+        insert into sip_minip_user
+        ( id,mopenid,unionid,nickname,gender,mobile_no,
+        province,city,country,avatarurl,wartermark,
+        createtime,lastmodifiedtime)
+        values (#{id},#{mopenid},#{unionid},#{nickname},#{gender},#{mobileNo},
+        #{province},#{city},#{country},#{avatarurl},#{wartermark},
+        #{createtime},#{lastmodifiedtime})
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.oldbaby.sip.common.SipMinipUser" useGeneratedKeys="true">
+        insert into sip_minip_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="mopenid != null">mopenid,</if>
+                <if test="unionid != null">unionid,</if>
+                <if test="nickname != null">nickname,</if>
+                <if test="gender != null">gender,</if>
+                <if test="mobileNo != null">mobile_no,</if>
+                <if test="province != null">province,</if>
+                <if test="city != null">city,</if>
+                <if test="country != null">country,</if>
+                <if test="avatarurl != null">avatarurl,</if>
+                <if test="wartermark != null">wartermark,</if>
+                <if test="createtime != null">createtime,</if>
+                <if test="lastmodifiedtime != null">lastmodifiedtime,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id},</if>
+                <if test="mopenid != null">#{mopenid},</if>
+                <if test="unionid != null">#{unionid},</if>
+                <if test="nickname != null">#{nickname},</if>
+                <if test="gender != null">#{gender},</if>
+                <if test="mobileNo != null">#{mobileNo},</if>
+                <if test="province != null">#{province},</if>
+                <if test="city != null">#{city},</if>
+                <if test="country != null">#{country},</if>
+                <if test="avatarurl != null">#{avatarurl},</if>
+                <if test="wartermark != null">#{wartermark},</if>
+                <if test="createtime != null">#{createtime},</if>
+                <if test="lastmodifiedtime != null">#{lastmodifiedtime},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cn.oldbaby.sip.common.SipMinipUser">
+        update sip_minip_user
+        <set>
+                <if test="mopenid != null">
+                    mopenid = #{mopenid},
+                </if>
+                <if test="unionid != null">
+                    unionid = #{unionid},
+                </if>
+                <if test="nickname != null">
+                    nickname = #{nickname},
+                </if>
+                <if test="gender != null">
+                    gender = #{gender},
+                </if>
+                <if test="mobileNo != null">
+                    mobile_no = #{mobileNo},
+                </if>
+                <if test="province != null">
+                    province = #{province},
+                </if>
+                <if test="city != null">
+                    city = #{city},
+                </if>
+                <if test="country != null">
+                    country = #{country},
+                </if>
+                <if test="avatarurl != null">
+                    avatarurl = #{avatarurl},
+                </if>
+                <if test="wartermark != null">
+                    wartermark = #{wartermark},
+                </if>
+                <if test="createtime != null">
+                    createtime = #{createtime},
+                </if>
+                <if test="lastmodifiedtime != null">
+                    lastmodifiedtime = #{lastmodifiedtime},
+                </if>
+        </set>
+        where   id = #{id} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cn.oldbaby.sip.common.SipMinipUser">
+        update sip_minip_user
+        set 
+            mopenid =  #{mopenid},
+            unionid =  #{unionid},
+            nickname =  #{nickname},
+            gender =  #{gender},
+            mobile_no =  #{mobileNo},
+            province =  #{province},
+            city =  #{city},
+            country =  #{country},
+            avatarurl =  #{avatarurl},
+            wartermark =  #{wartermark},
+            createtime =  #{createtime},
+            lastmodifiedtime =  #{lastmodifiedtime}
+        where   id = #{id} 
+    </update>
+</mapper>
