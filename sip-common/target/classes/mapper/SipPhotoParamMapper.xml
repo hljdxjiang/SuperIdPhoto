@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.oldbaby.sip.common.mapper.SipPhotoParamMapper">
+
+    <resultMap id="BaseResultMap" type="cn.oldbaby.sip.common.domain.SipPhotoParam">
+            <result property="id" column="id" />
+            <result property="itemId" column="item_id" />
+            <result property="itemName" column="item_name" />
+            <result property="widthPx" column="width_px" />
+            <result property="heightPx" column="height_px" />
+            <result property="dpi" column="dpi" />
+            <result property="fileSizeMsg" column="file_size_msg" />
+            <result property="category" column="category" />
+            <result property="categoryId" column="category_id" />
+            <result property="createTime" column="create_time" />
+            <result property="lastModifiedTime" column="last_modified_time" />
+            <result property="itemStatus" column="item_status" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,item_id,item_name,width_px,height_px,dpi,
+        file_size_msg,category,category_id,create_time,last_modified_time,
+        item_status
+    </sql>
+
+    <select id="selectList" resultMap="BaseResultMap" >
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        sip_photo_param
+        <where>
+            <if test="itemStatus != null and itemStatus !=''">
+                item_status = #{itemStatus}
+            </if>
+            <if test="item_id != null and item_id !=''">
+                and item_id = #{item_id}
+            </if>
+            <if test="itemName != null and itemName != ''">
+                and item_name  LIKE CONCAT(#{activeType}, '%')
+            </if>
+            <if test="categoryId != null and categoryId !=''">
+                category_Id = #{categoryId}
+            </if>
+        </where>
+    </select>
+
+    <insert id="createItem" parameterType="cn.oldbaby.sip.common.domain.SipPhotoParam">
+        insert into sip_photo_param
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="itemId != null">
+                recom_openid,
+            </if>
+            <if test="itemName != null">
+                item_name,
+            </if>
+            <if test="widthPx != null">
+                width_px,
+            </if>
+            <if test="heightPx != null">
+                height_px,
+            </if>
+            <if test="dpi != null">
+                dpi,
+            </if>
+            <if test="fileSizeMsg != null">
+                file_size_msg,
+            </if>
+            <if test="category != null">
+                category,
+            </if>
+            <if test="categoryId != null">
+                category_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="itemId != null">
+                #{itemId},
+            </if>
+            <if test="itemName != null">
+                #{itemName},
+            </if>
+            <if test="widthPx != null">
+                #{widthPx},
+            </if>
+            <if test="heightPx != null">
+                #{heightPx},
+            </if>
+            <if test="dpi != null">
+                #{dpi},
+            </if>
+            <if test="fileSizeMsg != null">
+                #{fileSizeMsg},
+            </if>
+            <if test="category != null">
+                #{category},
+            </if>
+            <if test="categoryId != null">
+                #{categoryId},
+            </if>
+        </trim>
+    </insert>
+
+
+    <update id="updateItem"
+            parameterType="cn.oldbaby.sip.common.domain.SipPhotoParam">
+        update sip_photo_param
+        <set>
+            <if test="itemId != null">
+                recom_openid = #{itemId},
+            </if>
+            <if test="itemName != null">
+                item_name = #{itemName},
+            </if>
+            <if test="widthPx != null">
+                width_px = #{widthPx},
+            </if>
+            <if test="heightPx != null">
+                height_px = #{heightPx},
+            </if>
+            <if test="dpi != null">
+                dpi = #{dpi},
+            </if>
+            <if test="fileSizeMsg != null">
+                file_size_msg = #{fileSizeMsg},
+            </if>
+            <if test="category != null">
+                category = #{category},
+            </if>
+            <if test="categoryId != null">
+                categoryId = #{categoryId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteItem" parameterType="integer">
+        delete from sip_photo_param where id=#{id}
+    </delete>
+</mapper>

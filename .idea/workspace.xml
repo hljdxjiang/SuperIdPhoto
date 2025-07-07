@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9949828-1323-41ef-909d-8fb7fa6faa27" name="默认的" comment="增加行员管理层维护表,登录返回亿联员工标识和管理层标识 refs #93866" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="branch_loginUpdate_20230330" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$PROJECT_DIR$/../../../maven/Repo" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="dev" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2JoDNodyTXQDpFklHXZIkHSICmY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.ocs-api [clean].executor": "Run",
+    "Maven.ocs-api [package].executor": "Run",
+    "Maven.offscreen-checkin-system [clean].executor": "Run",
+    "Maven.offscreen-checkin-system [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.api.executor": "Debug",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Volumes/Lexar/Code/Java/super-id-photo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.29622814",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ocs-common/src/main/resources/mapper" />
+      <recent name="$PROJECT_DIR$/ocs-common/src/main/java/com/yillion/ocs/common" />
+      <recent name="$PROJECT_DIR$/cua-common/src/main/resources/mapper/Config" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sip-common/src/main/java/cn/oldbaby/sip/common/mapper" />
+      <recent name="$PROJECT_DIR$/sip-common/src/main/resources/mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.oldbaby.sip.common.service.impl" />
+      <recent name="cn.oldbaby.sip.common.service" />
+      <recent name="cn.oldbaby.sip.common.properties" />
+      <recent name="com.yillion.ocs.api.model" />
+      <recent name="com.yillion.ocs.common.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.api">
+    <configuration name="api" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sip-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.oldbaby.sip.api.ApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="background" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cua-background" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yillion.cua.background.BackGroupApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.background" />
+      <item itemvalue="Spring Boot.api" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_392-corretto-1.8.0_392-f644763e9732-9fbf141a" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9949828-1323-41ef-909d-8fb7fa6faa27" name="默认的" comment="" />
+      <created>1672735504342</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672735504342</updated>
+      <workItem from="1672735506347" duration="1914000" />
+      <workItem from="1672816596366" duration="1595000" />
+      <workItem from="1672819880927" duration="155000" />
+      <workItem from="1672993200159" duration="499000" />
+      <workItem from="1675151870059" duration="95000" />
+      <workItem from="1675748544745" duration="787000" />
+      <workItem from="1675750088668" duration="1262000" />
+      <workItem from="1676515156979" duration="2347000" />
+      <workItem from="1677664648252" duration="1056000" />
+      <workItem from="1677670312463" duration="9000" />
+      <workItem from="1677670804961" duration="818000" />
+      <workItem from="1678070137435" duration="8797000" />
+      <workItem from="1678106126181" duration="551000" />
+      <workItem from="1678701013748" duration="1031000" />
+      <workItem from="1678781764564" duration="289000" />
+      <workItem from="1679023540592" duration="4741000" />
+      <workItem from="1679276167342" duration="10288000" />
+      <workItem from="1679302341985" duration="1499000" />
+      <workItem from="1679881019996" duration="4423000" />
+      <workItem from="1680055636171" duration="10236000" />
+      <workItem from="1680177266295" duration="223000" />
+      <workItem from="1681123369806" duration="653000" />
+      <workItem from="1681129963527" duration="1118000" />
+      <workItem from="1681196708156" duration="336000" />
+      <workItem from="1681203918176" duration="2832000" />
+      <workItem from="1681261954787" duration="743000" />
+      <workItem from="1681277705590" duration="583000" />
+      <workItem from="1681289004443" duration="1623000" />
+      <workItem from="1681290743229" duration="977000" />
+      <workItem from="1681291907539" duration="185000" />
+      <workItem from="1681292128112" duration="2903000" />
+      <workItem from="1681295419140" duration="94000" />
+      <workItem from="1681295516166" duration="67000" />
+      <workItem from="1681295586068" duration="7904000" />
+      <workItem from="1681305162864" duration="32903000" />
+      <workItem from="1681783109317" duration="16874000" />
+      <workItem from="1681892243558" duration="6000" />
+      <workItem from="1681893970479" duration="1210000" />
+      <workItem from="1681900530129" duration="3000" />
+      <workItem from="1698026634800" duration="1043000" />
+      <workItem from="1698047859950" duration="1188000" />
+      <workItem from="1698065107766" duration="3528000" />
+      <workItem from="1700211307818" duration="30000" />
+      <workItem from="1705301838853" duration="3188000" />
+      <workItem from="1705460465975" duration="1894000" />
+      <workItem from="1751593735187" duration="2160000" />
+      <workItem from="1751596881199" duration="66000" />
+      <workItem from="1751597718416" duration="16642000" />
+      <workItem from="1751858427349" duration="13956000" />
+    </task>
+    <task id="LOCAL-00005" summary="优化dockerfile refs #91975">
+      <created>1678086176033</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678086176033</updated>
+    </task>
+    <task id="LOCAL-00006" summary="添加通用dockerfile refs #91975">
+      <created>1678087289964</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678087289964</updated>
+    </task>
+    <task id="LOCAL-00007" summary="优化通用dockerFile refs #91975">
+      <created>1678087435177</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678087435177</updated>
+    </task>
+    <task id="LOCAL-00008" summary="添加通用Jenkins Pipeline refs #91975">
+      <created>1678092110879</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678092110879</updated>
+    </task>
+    <task id="LOCAL-00009" summary="添加通用k8s yaml,优化pipeline脚本 refs #91975">
+      <created>1678095819426</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678095819426</updated>
+    </task>
+    <task id="LOCAL-00010" summary="优化pipeline脚本 refs #91975">
+      <created>1678096050079</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678096050079</updated>
+    </task>
+    <task id="LOCAL-00011" summary="完善流水线脚本 refs #91975">
+      <created>1678097325019</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678097325019</updated>
+    </task>
+    <task id="LOCAL-00012" summary="优化后管页面，新增通用配置页面 refs #91974">
+      <created>1679038536634</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679038536634</updated>
+    </task>
+    <task id="LOCAL-00013" summary="优化后管页面，优化通用配置接口 refs #91974">
+      <created>1679039239666</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679039239666</updated>
+    </task>
+    <task id="LOCAL-00014" summary="优化后管页面，优化通用配置接口 refs #91974">
+      <created>1679284101154</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679284101154</updated>
+    </task>
+    <task id="LOCAL-00015" summary="优化后管页面，优化通用配置接口 refs #91974">
+      <created>1679284508011</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679284508011</updated>
+    </task>
+    <task id="LOCAL-00016" summary="优化后管页面，优化通用配置接口,限制数量 refs #91974">
+      <created>1679291194401</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679291194401</updated>
+    </task>
+    <task id="LOCAL-00017" summary="优化后管页面，优化通用配置接口, refs #91974">
+      <created>1679291916416</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1679291916416</updated>
+    </task>
+    <task id="LOCAL-00018" summary="优化后管页面，优化通用配置接口, refs #91974">
+      <created>1679292940942</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1679292940942</updated>
+    </task>
+    <task id="LOCAL-00019" summary="优化后管页面，优化通用配置接口, refs #91974">
+      <created>1679294315942</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1679294315942</updated>
+    </task>
+    <task id="LOCAL-00020" summary="优化后管页面，优化用户同步接口接口, refs #91974">
+      <created>1679297403462</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1679297403462</updated>
+    </task>
+    <task id="LOCAL-00021" summary="优化用户注销接口，返回报问题 refs #91974">
+      <created>1679899246729</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1679899246729</updated>
+    </task>
+    <task id="LOCAL-00022" summary="优化认证服务中心 refs #91974">
+      <created>1680069710945</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680069710945</updated>
+    </task>
+    <task id="LOCAL-00023" summary="优化认证服务中心 refs #91974">
+      <created>1680076475167</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1680076475167</updated>
+    </task>
+    <task id="LOCAL-00024" summary="优化认证服务中心,密码状态默认0 refs #91974">
+      <created>1680077342646</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680077342646</updated>
+    </task>
+    <task id="LOCAL-00025" summary="优化用户注销接口 refs #91974">
+      <created>1680082827674</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1680082827674</updated>
+    </task>
+    <task id="LOCAL-00026" summary="优化用户注销接口 refs #91974">
+      <created>1680084328999</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1680084328999</updated>
+    </task>
+    <task id="LOCAL-00027" summary="新增用户登录接口 refs #91974">
+      <created>1681305147043</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681305147043</updated>
+    </task>
+    <task id="LOCAL-00028" summary="优化登录接口 refs #91974">
+      <created>1681306162690</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681306162690</updated>
+    </task>
+    <task id="LOCAL-00029" summary="增加数据库相关内容及接口 refs #93866">
+      <created>1681354851998</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681354851998</updated>
+    </task>
+    <task id="LOCAL-00030" summary="优化用户查询，新增记录查询接口 refs #93866">
+      <created>1681365408200</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681365408200</updated>
+    </task>
+    <task id="LOCAL-00031" summary="新增字典查询接口 refs #93866">
+      <created>1681365912186</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1681365912186</updated>
+    </task>
+    <task id="LOCAL-00032" summary="优化代码备注 refs #93866">
+      <created>1681366039246</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681366039246</updated>
+    </task>
+    <task id="LOCAL-00033" summary="完善签到签退接口 refs #93866">
+      <created>1681370092477</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681370092477</updated>
+    </task>
+    <task id="LOCAL-00034" summary="格式化代码 refs #93866">
+      <created>1681370141382</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1681370141382</updated>
+    </task>
+    <task id="LOCAL-00035" summary="优化接口 refs #93866">
+      <created>1681390867795</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681390867795</updated>
+    </task>
+    <task id="LOCAL-00036" summary="优化项目配置脚本 refs #93866">
+      <created>1681390968215</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1681390968215</updated>
+    </task>
+    <task id="LOCAL-00037" summary="优化项目配置脚本,增加可配置化 refs #93866">
+      <created>1681434321908</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1681434321908</updated>
+    </task>
+    <task id="LOCAL-00038" summary="修改启动端口 refs #93866">
+      <created>1681439887017</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681439887017</updated>
+    </task>
+    <task id="LOCAL-00039" summary="修改Session校验连接器 refs #93866">
+      <created>1681443150209</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1681443150209</updated>
+    </task>
+    <task id="LOCAL-00040" summary="增加签到原因描述，开发环境不校验session refs #93866">
+      <created>1681785872583</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1681785872583</updated>
+    </task>
+    <task id="LOCAL-00041" summary="增加签到原因描述，开发环境不校验session refs #93866">
+      <created>1681786334065</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1681786334065</updated>
+    </task>
+    <task id="LOCAL-00042" summary="增加签到原因描述，开发环境不校验session refs #93866">
+      <created>1681786898907</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1681786898907</updated>
+    </task>
+    <task id="LOCAL-00043" summary="增加签到原因描述，开发环境不校验session refs #93866">
+      <created>1681787222886</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1681787222886</updated>
+    </task>
+    <task id="LOCAL-00044" summary="优化mapper refs #93866">
+      <created>1681787847815</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1681787847815</updated>
+    </task>
+    <task id="LOCAL-00045" summary="优化mapper refs #93866">
+      <created>1681788827308</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1681788827308</updated>
+    </task>
+    <task id="LOCAL-00046" summary="优化mapper refs #93866">
+      <created>1681800157440</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1681800157440</updated>
+    </task>
+    <task id="LOCAL-00047" summary="优化mapper refs #93866">
+      <created>1681800947053</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1681800947053</updated>
+    </task>
+    <task id="LOCAL-00048" summary="增加日志输出 refs #93866">
+      <created>1681805437568</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1681805437568</updated>
+    </task>
+    <task id="LOCAL-00049" summary="增加日志输出 refs #93866">
+      <created>1681806740171</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1681806740171</updated>
+    </task>
+    <task id="LOCAL-00050" summary="优化记录查询 refs #93866">
+      <created>1681808342359</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1681808342359</updated>
+    </task>
+    <task id="LOCAL-00051" summary="屏蔽上穿参数带空格问题 refs #93866">
+      <created>1681810472299</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1681810472299</updated>
+    </task>
+    <task id="LOCAL-00052" summary="屏蔽上穿参数带空格问题 refs #93866">
+      <created>1681811366703</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1681811366703</updated>
+    </task>
+    <task id="LOCAL-00053" summary="解决用户登录问题 refs #93866">
+      <created>1681811392499</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1681811392499</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="优化后管页面，优化用户同步接口接口, refs #91974" />
+    <MESSAGE value="优化用户注销接口，返回报问题 refs #91974" />
+    <MESSAGE value="优化认证服务中心 refs #91974" />
+    <MESSAGE value="优化认证服务中心,密码状态默认0 refs #91974" />
+    <MESSAGE value="优化用户注销接口 refs #91974" />
+    <MESSAGE value="新增用户登录接口 refs #91974" />
+    <MESSAGE value="优化登录接口 refs #91974" />
+    <MESSAGE value="增加数据库相关内容及接口 refs #93866" />
+    <MESSAGE value="优化用户查询，新增记录查询接口 refs #93866" />
+    <MESSAGE value="新增字典查询接口 refs #93866" />
+    <MESSAGE value="优化代码备注 refs #93866" />
+    <MESSAGE value="完善签到签退接口 refs #93866" />
+    <MESSAGE value="格式化代码 refs #93866" />
+    <MESSAGE value="优化接口 refs #93866" />
+    <MESSAGE value="优化项目配置脚本 refs #93866" />
+    <MESSAGE value="优化项目配置脚本,增加可配置化 refs #93866" />
+    <MESSAGE value="修改启动端口 refs #93866" />
+    <MESSAGE value="修改Session校验连接器 refs #93866" />
+    <MESSAGE value="增加签到原因描述，开发环境不校验session refs #93866" />
+    <MESSAGE value="优化mapper refs #93866" />
+    <MESSAGE value="增加日志输出 refs #93866" />
+    <MESSAGE value="优化记录查询 refs #93866" />
+    <MESSAGE value="屏蔽上穿参数带空格问题 refs #93866" />
+    <MESSAGE value="解决用户登录问题 refs #93866" />
+    <MESSAGE value="增加行员管理层维护表,登录返回亿联员工标识和管理层标识 refs #93866" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加行员管理层维护表,登录返回亿联员工标识和管理层标识 refs #93866" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sip-api/src/main/java/com/yillion/cua/api/service/user/impl/SyncUserServiceImpl.java</url>
+          <line>351</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sip-api/src/main/java/com/yillion/cua/api/service/user/impl/UnRegisterServiceImpl.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/sip-common/src/main/java/com/yillion/ocs/common/dao/TOcsSignRecordDao.java</url>
+          <line>45</line>
+          <properties class="com.yillion.ocs.common.dao.TOcsSignRecordDao" />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
